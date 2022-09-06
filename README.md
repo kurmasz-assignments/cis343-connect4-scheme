@@ -2,7 +2,7 @@
 
 Use this [GitHub Classroom link]() to create a repo for this project.
 
-** !!! Important !!! ** This is an _individual_ assignment.  You _may not_ work in teams.
+**!!! Important !!!** This is an _individual_ assignment.  You _may not_ work in teams.
 
 ## Overview
 
