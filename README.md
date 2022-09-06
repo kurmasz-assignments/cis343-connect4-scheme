@@ -1,7 +1,6 @@
 # Connect 4 in Scheme
 
-Use this [GitHub Classroom link]() to create a repo for this project.  You will need to add your own copy of `kawa-3.1.1.jar` to your repo.
-(I don't want to clutter up GitHub or my laptop with 30 copies of the same file.)
+Use this [GitHub Classroom link]() to create a repo for this project.
 
 ** !!! Important !!! ** This is an _individual_ assignment.  You _may not_ work in teams.
 
@@ -37,7 +36,6 @@ This project uses the same interface rules as [the C version](https://github.com
 
 ### Hints
 
-1. Remember, you need to add your own copy of `kawa-3.1.1.jar` to the repo.
 2. The included `connect4.scm` file includes some functions you may find helpful.  You are not required to use them.
 3. Nesting functions will reduce the number of parameters you end up passing.
 

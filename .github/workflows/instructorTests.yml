@@ -1,0 +1,16 @@
+name: Connect 4 Check
+on: 
+   workflow_dispatch:
+   push:
+      tags:
+         - checkMe*
+jobs:
+   run-instructor-tests:
+      runs-on: ubuntu-latest
+      steps:
+         - uses: actions/checkout@v3
+         - run: curl https://zk-autograde.herokuapp.com/test
+         - run: sudo gem install rspec
+         - run: curl https://zk-autograde.herokuapp.com/Autograde/c4_instructor_spec.rb --output spec/c4_instructor_spec.rb
+         - run: rspec spec/c4_student_spec.rb
+         - run: rspec spec/c4_instructor_spec.rb
