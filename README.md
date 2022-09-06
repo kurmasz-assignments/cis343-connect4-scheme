@@ -1,6 +1,6 @@
 # Connect 4 in Scheme
 
-Use this [GitHub Classroom link]() to create a repo for this project.
+Use this [GitHub Classroom link](https://classroom.github.com/a/U3xDWEk-) to create a repo for this project.
 
 **!!! Important !!!** This is an _individual_ assignment.  You _may not_ work in teams.
 
