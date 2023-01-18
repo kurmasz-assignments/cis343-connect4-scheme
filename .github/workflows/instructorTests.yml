@@ -9,8 +9,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
          - uses: actions/checkout@v3
-         - run: curl https://zk-autograde.herokuapp.com/test
          - run: sudo gem install rspec
-         - run: curl https://zk-autograde.herokuapp.com/Autograde/c4_instructor_spec.rb --output spec/c4_instructor_spec.rb
+         - run: curl https://autograder.computing.gvsu.edu/c4_instructor_spec.rb --output spec/c4_instructor_spec.rb -k
          - run: rspec spec/c4_student_spec.rb
          - run: rspec spec/c4_instructor_spec.rb

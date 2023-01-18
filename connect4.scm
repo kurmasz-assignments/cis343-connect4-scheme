@@ -43,6 +43,7 @@
     ((car (connect4-game num_rows num_columns win_length)))
 )
 
+;   
 (define num_args (vector-length command-line-arguments))
 (cond 
   ((= 0 num_args) (play-connect-4 6 7 4))  ; play a default 6x7 game of Connect 4.

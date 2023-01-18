@@ -16,7 +16,11 @@ RSpec::Matchers.define :declare_win_for do |expected|
     actual[:winner].to_i == expected.to_i
   end
   failure_message do |actual|
-    "Expected player #{expected} to win, but player #{actual[:winner]} won. Last line was \"#{actual[:last_line]}\""
+      if (actual[:quit])
+        "Expected player #{expected} to win, but game was abandoned. Last line was \"#{actual[:last_line]}\""
+      else
+        "Expected player #{expected} to win, but player #{actual[:winner]} won. Last line was \"#{actual[:last_line]}\""
+      end
   end
 end
 
@@ -57,7 +61,14 @@ def run(command_line, input)
   end # run
 
 def test_c4(input, num_rows=6, num_columns=7, win_length=4)
+  if (num_rows.nil?)
+    command = "#{c4_exec}"
+  elsif (win_length.nil?)
+    command = "#{c4_exec} #{num_rows}x#{num_columns}"
+  else
     command = "#{c4_exec} #{num_rows}x#{num_columns} #{win_length}"
+  end
+  
     input_with_newlines = input.chars.join("\n")
     
     puts "Running =>#{command}<= with =>#{input}<=" if debug_mode?
@@ -72,8 +83,8 @@ def test_c4(input, num_rows=6, num_columns=7, win_length=4)
     end
 
     if last_line =~ /Goodbye/
-      return {quit: true}
+      return {quit: true, last_line: last_line}
     end  
 
-    {winner: -1, quit: false, last_line: last_line}
+    {winner: -999, quit: false, last_line: last_line}
    end

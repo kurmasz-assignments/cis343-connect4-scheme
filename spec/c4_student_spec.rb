@@ -1,3 +1,6 @@
+#
+# zzNAMEzz
+#
 require 'spec_helper'
 
 describe 'C4 standard board size' do
@@ -25,3 +28,4 @@ describe 'Connect 4 alternate' do
         expect(result).to be_abandoned
     end
 end
+

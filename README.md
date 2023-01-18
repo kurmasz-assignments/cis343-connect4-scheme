@@ -1,6 +1,6 @@
 # Connect 4 in Scheme
 
-Use this [GitHub Classroom link](https://classroom.github.com/a/U3xDWEk-) to create a repo for this project.
+Use this [GitHub Classroom link]() to create a repo for this project.
 
 **!!! Important !!!** This is an _individual_ assignment.  You _may not_ work in teams.
 
@@ -51,8 +51,6 @@ Your code must follow standard design principles.  For example, be sure to
 You must use a Test Driven Development (TDD) workflow.  If done well, your system tests from the C version of Connect 4 should also work for this project.
 
 ## Submission
-
-When your initial tests are complete, check in your code with "[Check Tests]" in the commit message.
 
 When your project is complete (has a complete set of tests, has a working game, passes my automated tests, and is well-formatted and well-documented), 
 check in your code with "[Grade Me]" in the commit message.
